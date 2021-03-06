@@ -1,0 +1,15 @@
+{% extends 'familiares/base.html' %}
+
+{% block content %}
+
+<div class="row" style="margin-top:10px;">
+
+    <div class="col s12 m4">
+    <form method="post" >
+        {% csrf_token %}
+       {{form}}
+        <button type="submit" class="btn grey darken-1" name="crear">Agregar</button>
+    </form>
+        </div>
+    </div>
+{% endblock %}

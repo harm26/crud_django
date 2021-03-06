@@ -1,0 +1,12 @@
+
+{% extends 'familiares/base.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form}}
+   <input type="submit" class="btn" name="editar">
+</form>
+
+{% endblock %}

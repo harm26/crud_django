@@ -1,0 +1,19 @@
+
+{% extends 'familiares/base.html' %}
+
+{% block content %}
+
+<h1>Eliminar</h1>
+
+<p>Seguro quieres eliminar {{familiar.nombre}}?</p>
+<a href="{% url 'inicio' %}" >Cancelar</a>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="confirmar" class="btn red" >Eliminar</button>
+</form>
+
+
+
+
+{% endblock %}

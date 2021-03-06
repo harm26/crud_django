@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block title %} <title> {{ title }} </title> {% endblock %}
+
+     <!-- materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+</head>
+<body>
+ <div class="navbar-fixed">
+<nav>
+    <div class="nav-wrapper grey darken-2 " >
+      <a href="/" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down p-3">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="crear">Crear</a></li>
+      </ul>
+    </div>
+  </nav>
+ </div>
+
+
+
+{% block content %}
+
+{% endblock %}
+<!--  JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
