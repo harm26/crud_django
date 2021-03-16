@@ -1,8 +1,20 @@
 from django.shortcuts import render, redirect
 from familiares.models import Familiares
 from .forms import *
+from rest_framework import generics
+from .serializer import FamiliaresSerializers
 
 # Create your views here.
+
+class FamiliaresList(generics.ListCreateAPIView):
+    queryset = Familiares.objects.all()
+    serializer_class = FamiliaresSerializers
+
+class FamiliaresDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Familiares.objects.all()
+    serializer_class = FamiliaresSerializers
+
+
 
 def inicio(request):
     familiares= Familiares.objects.all()
